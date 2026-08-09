@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meowkis — Developer Portfolio</title>
+
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/font.css">
+    <script defer src="/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#about" aria-label="Meowkis homepage" id="header-url">
+            Meowkis.is-a.dev
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="/lab/">Lab</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button id="sound-switch" type="button" aria-pressed="false" aria-label="Toggle background music">
+            Stop music
+        </button>
+
+        <fieldset class="theme-switcher">
+            <legend>Theme</legend>
+            <button type="button" data-theme-choice="lime" aria-pressed="true">Vista</button>
+            <button type="button" data-theme-choice="amber" aria-pressed="false">Sunset</button>
+            <button type="button" data-theme-choice="ice" aria-pressed="false">Aqua</button>
+        </fieldset>
+    </header>
+
+    <main>
+        <section id="about" aria-labelledby="about-heading">
+            <div class="profile-intro">
+                <div class="avatar-placeholder" role="img" aria-label="Avatar placeholder">[ AVATAR ]</div>
+                <div>
+                    <h1 id="about-heading" data-type>Hey, I'm Meowkis!</h1>
+                    <p>Systems-oriented software developer working on network services and hardware-integrated software.
+                    </p>
+                    <p class="status-line">coding with my paws 🐾</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" data-type>Projects</h2>
+
+            <div class="projects-grid">
+                <article class="card">
+                    <p class="card-label">[ 00 ]</p>
+                    <h3 data-type>Esublim</h3>
+                    <p>A Wayland-native reimplementation of asublim, built with GTK4 and gtk4-layer-shell for
+                        compositors such as Hyprland and
+                        Sway.</p>
+                    <p class="project-stack">C · GTK4 · Wayland · wlr-layer-shell</p>
+                    <a href="https://github.com/Meowkis/Esublim" target="_blank">View project →</a>
+                </article>
+                <article class="card placeholder-card">
+                    <p class="card-label">[ 01 ]</p>
+                    <h3 data-type>PortaL</h3>
+                    <p>Portable Deployable Laboratory Service for local research</p>
+                    <span aria-hidden="true">[ coming soon ]</span>
+                </article>
+                <article class="card">
+                    <p class="card-label">[ 02 ]</p>
+                    <h3 data-type>Meowboard</h3>
+                    <p>A self-hosted multimedia moodboard with anonymous reactions and a protected administration
+                        interface.</p>
+                    <p class="project-stack">Node.js · Express · SQLite · Nunjucks · HTMX · Docker</p>
+                    <a href="https://github.com/Meowkis/meowboard-js" target="_blank" rel="noreferrer">View project
+                        &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="research" aria-labelledby="research-heading">
+            <h2 id="research-heading" data-type>Research</h2>
+            <article class="log-entry">
+                <time datetime="2026">2026</time>
+                <div>
+                    <h3 data-type>Embedded &amp; radio experiments</h3>
+                    <p>Currently exploring embedded development, SDR and radio astronomy.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" data-type>Skills</h2>
+            <ul class="tag-list">
+                <li class="skill-row"><span class="skill-name">TypeScript</span>
+                    <div class="skill-meter" data-level="86"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="TypeScript skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">Python</span>
+                    <div class="skill-meter" data-level="78"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="Python skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">Luau</span>
+                    <div class="skill-meter" data-level="82"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="Luau skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">C / C++</span>
+                    <div class="skill-meter" data-level="68"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="C and C++ skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">Linux</span>
+                    <div class="skill-meter" data-level="90"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="Linux skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">Docker</span>
+                    <div class="skill-meter" data-level="85"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="Docker skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">Caddy</span>
+                    <div class="skill-meter" data-level="80"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="Caddy skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">PostgreSQL</span>
+                    <div class="skill-meter" data-level="72"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="PostgreSQL skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">VPN infrastructure</span>
+                    <div class="skill-meter" data-level="86"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="VPN infrastructure skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">Matrix</span>
+                    <div class="skill-meter" data-level="77"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="Matrix skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">ESP32</span>
+                    <div class="skill-meter" data-level="62"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="ESP32 skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+                <li class="skill-row"><span class="skill-name">HackRF / RTL-SDR</span>
+                    <div class="skill-meter" data-level="58"><span class="skill-loader"
+                            aria-hidden="true">|</span><progress class="skill-track" max="100" value="0"
+                            aria-label="HackRF and RTL-SDR skill level"></progress><span class="skill-value"
+                            aria-hidden="true">--%</span></div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" data-type>Contact</h2>
+
+            <address>
+                <a href="mailto:kittycat@meowkis.ru">Email &mdash; kittycat@meowkis.ru</a>
+                <a href="https://discord.com/users/1189928578071142420" target="_blank">Discord — @femmeowkis</a>
+                <a href="https://github.com/Meowkis" target="_blank">GitHub — @Meowkis</a>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <small>
+                &copy;
+                <span id="current-year">2026</span>
+                meowkis.is-a.dev. All rights reserved.
+            </small>
+        </p>
+
+        <p>
+            <small>
+                Last updated:
+                <time id="last-updated"></time>
+            </small>
+        </p>
+
+        <section class="web-badges">
+            <div class="badge-wall">
+                <img class="web-badge" src="/assets/badges/vim.gif" width="88" height="31" alt="Vim badge">
+                <img class="web-badge" src="/assets/badges/wiby.gif" width="88" height="31" alt="Wiby search badge">
+                <img class="web-badge" src="/assets/badges/wip.gif" width="88" height="31" alt="Work in progress badge">
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

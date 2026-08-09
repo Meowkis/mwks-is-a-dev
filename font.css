@@ -1,0 +1,23 @@
+:root {
+  --font-main: "Courier New", Courier, monospace;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+body {
+  font-family: var(--font-main);
+}
+
+h1,
+h2,
+h3,
+nav {
+  font-family: var(--font-main);
+}
+
+button,
+time,
+.project-status,
+.system-label,
+footer {
+  font-family: var(--font-mono);
+}

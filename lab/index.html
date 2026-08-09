@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowkis Lab</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/font.css">
+    <script defer src="/index.js"></script>
+</head>
+
+<body class="lab-page">
+    <header>
+        <a href="/" aria-label="Return to Meowkis homepage" id="header-url">Meowkis.is-a.dev</a>
+        <nav aria-label="Lab navigation">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#experiments">Experiments</a></li>
+                <li><a href="#notes">Notes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="lab-heading">
+            <p class="card-label">[ /lab ]</p>
+            <h1 id="lab-heading" data-type>Meowkis Lab</h1>
+            <p>Work-in-progress experiments, prototypes and field notes. Expect wires, radio noise and unfinished ideas.</p>
+            <p class="status-line">[ equipment: online ] [ curiosity: high ]</p>
+        </section>
+
+        <section id="experiments" aria-labelledby="experiments-heading">
+            <h2 id="experiments-heading" data-type>Experiments</h2>
+            <div class="projects-grid">
+                <article class="card placeholder-card">
+                    <p class="card-label">[ RF_01 ]</p>
+                    <h3 data-type>SDR signal log</h3>
+                    <p>A place for spectrum snapshots, antenna notes and strange signals worth investigating.</p>
+                    <span aria-hidden="true">[ listening... ]</span>
+                </article>
+                <article class="card placeholder-card">
+                    <p class="card-label">[ MCU_02 ]</p>
+                    <h3 data-type>ESP32 bench</h3>
+                    <p>Firmware prototypes, sensors and small systems that reach out into the physical world.</p>
+                    <span aria-hidden="true">[ compiling... ]</span>
+                </article>
+                <article class="card placeholder-card">
+                    <p class="card-label">[ NET_03 ]</p>
+                    <h3 data-type>Infrastructure tests</h3>
+                    <p>Small deployments, monitoring experiments and self-hosted services before production.</p>
+                    <span aria-hidden="true">[ provisioning... ]</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="notes" aria-labelledby="notes-heading">
+            <h2 id="notes-heading" data-type>Field notes</h2>
+            <article class="log-entry">
+                <time datetime="2026-08">2026-08</time>
+                <div>
+                    <h3 data-type>First entry pending</h3>
+                    <p>Drop short updates here: a thing tested, a signal received, a failure that taught you something.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy; <span id="current-year">2026</span> meowkis.is-a.dev</small></p>
+        <p><a href="/">&larr; Return to home</a></p>
+    </footer>
+</body>
+
+</html>
