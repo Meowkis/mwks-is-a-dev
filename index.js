@@ -18,7 +18,10 @@ const savedTheme = localStorage.getItem("theme");
 function setTheme(theme) {
   document.body.dataset.theme = theme === "lime" ? "" : theme;
   themeButtons.forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+    button.setAttribute(
+      "aria-pressed",
+      String(button.dataset.themeChoice === theme),
+    );
   });
   localStorage.setItem("theme", theme);
 }
@@ -29,7 +32,9 @@ themeButtons.forEach((button) => {
 });
 
 const typeTargets = document.querySelectorAll("[data-type]");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 const domainLink = document.getElementById("header-url");
 
 function scheduleDomainFlicker() {
@@ -38,10 +43,13 @@ function scheduleDomainFlicker() {
   const delay = 1800 + Math.random() * 5000;
   window.setTimeout(() => {
     domainLink.classList.add("is-flickering");
-    window.setTimeout(() => {
-      domainLink.classList.remove("is-flickering");
-      scheduleDomainFlicker();
-    }, 45 + Math.random() * 130);
+    window.setTimeout(
+      () => {
+        domainLink.classList.remove("is-flickering");
+        scheduleDomainFlicker();
+      },
+      45 + Math.random() * 130,
+    );
   }, delay);
 }
 
@@ -70,16 +78,21 @@ function typeText(element) {
 }
 
 if (reduceMotion || !("IntersectionObserver" in window)) {
-  typeTargets.forEach((element) => { element.dataset.typeText = element.textContent.trim(); });
+  typeTargets.forEach((element) => {
+    element.dataset.typeText = element.textContent.trim();
+  });
 } else {
-  const observer = new IntersectionObserver((entries, currentObserver) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const element = entry.target;
-      typeText(element);
-      currentObserver.unobserve(element);
-    });
-  }, { threshold: 0.4 });
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const element = entry.target;
+        typeText(element);
+        currentObserver.unobserve(element);
+      });
+    },
+    { threshold: 0.4 },
+  );
 
   typeTargets.forEach((element) => {
     element.dataset.typeText = element.textContent.trim();
