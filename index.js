@@ -100,3 +100,60 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
     observer.observe(element);
   });
 }
+
+// --- Animate skill bars
+const skillMeters = document.querySelectorAll(".skill-meter");
+
+function animateSkillBar(meter) {
+  const target = parseInt(meter.dataset.level, 10);
+  const track = meter.querySelector(".skill-track");
+  const label = meter.querySelector(".skill-value");
+  if (!track || isNaN(target)) return;
+
+  let current = 0;
+
+  if (reduceMotion) {
+    track.value = target;
+    if (label) label.textContent = `${target}%`;
+    return;
+  }
+
+  function step() {
+    if (current >= target) {
+      track.value = target;
+      if (label) label.textContent = `${target}%`;
+      return;
+    }
+
+    const increment = Math.min(
+      Math.floor(Math.random() * 5) + 1,
+      target - current,
+    );
+    current += increment;
+    track.value = current;
+    if (label) label.textContent = `${current}%`;
+
+    const delay = 30 + Math.random() * 70;
+    setTimeout(step, delay);
+  }
+
+  step();
+}
+
+if (!("IntersectionObserver" in window)) {
+  skillMeters.forEach(animateSkillBar);
+} else {
+  const skillObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateSkillBar(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 },
+  );
+
+  skillMeters.forEach((meter) => skillObserver.observe(meter));
+}
