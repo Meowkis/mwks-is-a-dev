@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="VFX/crt.css">
     <script defer src="index.js"></script>
+    <script defer src="intro/intro.js"></script>
     <script defer src="VFX/crt.js"></script>
 </head>
 
@@ -42,8 +43,50 @@
                 <button type="button" data-theme-choice="ice" aria-pressed="false">Aqua</button>
             </fieldset>
         </header>
-
         <main>
+            <section id="IntroVideo" class="hidden">
+                <h2 data-type>Brainwash Procedure</h2>
+                <div class="projects-grid login-grid">
+                    <article class="card login-card">
+                        <video class="video-container" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+                    </article>
+                </div>
+            </section>
+
+            <section id="loginForm">
+                <h2 data-type>Login, please</h2>
+                <div class="projects-grid login-grid">
+                    <article class="card login-card">
+                        <p class="card-label">[ AUTHENTICATION ]</p>
+                        <span class="LoginLogoText">
+                            Login to Mwks Systems Gateway
+                        </span>
+
+                        <div>
+                            <div class="login-field">
+                                <label for="username">Username</label>
+                                <input id="username" type="text" class="usernameInput" autocomplete="off"
+                                    placeholder="Username">
+                            </div>
+
+                            <div class="login-field">
+                                <label for="password">Password</label>
+                                <input id="password" type="password" class="passwordInput" autocomplete="new-password"
+                                    placeholder="Password">
+                            </div>
+
+                            <button class="login-button" type="submit">
+                                Sign in
+                            </button>
+                        </div>
+                        <p class="login-status">Please enter your credentials.</p>
+                    </article>
+                </div>
+            </section>
+
+
+
+
             <section id="about" aria-labelledby="about-heading">
                 <div class="profile-intro">
                     <div class="avatar-placeholder" role="img" aria-label="Avatar placeholder">
