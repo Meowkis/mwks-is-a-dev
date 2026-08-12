@@ -870,3 +870,8 @@ body:has(#loginForm.hidden):has(#IntroVideo.hidden)
 .hidden {
   display: none;
 }
+
+.video-container {
+  height: 100%;
+  width: 100%;
+}
